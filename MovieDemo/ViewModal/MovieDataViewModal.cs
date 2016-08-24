@@ -10,16 +10,6 @@ namespace MovieDemo.ViewModal
 {
     public class MovieDataViewModal : IValidatableObject
     {
-        public MovieDataViewModal()
-        {
-            
-        }
-        public MovieDataViewModal(IDataRepository dataSrc)
-        {
-            this.dataSrc = dataSrc;
-        }
-
-        [Inject] IDataRepository dataSrc { get; set; }
         
         public int MovieId { get; set; }
         [Required]
@@ -42,10 +32,7 @@ namespace MovieDemo.ViewModal
             {
                 result.Add(new ValidationResult("Title can not be the same as your Genre", new string[] { "Title" }));
             }
-            if(dataSrc.DoesTitleAlreadyExist(Title))
-            {
-                result.Add(new ValidationResult("Title already existing", new string[] { "Title" }));
-            }
+            
             return result;
         }
     }
