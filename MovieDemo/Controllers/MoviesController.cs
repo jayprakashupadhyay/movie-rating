@@ -1,20 +1,15 @@
 ﻿using System;
-using System.Collections;
-using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using MoviesLibrary;
-using System.Web.Http.Description;
-using System.Reflection;
-using System.Collections.Generic;
 using System.Web.Http.OData;
-using System.Web.Mvc;
 using MovieDemo.Services;
-using MovieDemo.Common;
 using AutoMapper;
 using MovieDemo.ViewModal;
 
 namespace MovieDemo.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class MoviesController : ApiController
     {
         private readonly IDataRepository _repo;
@@ -25,7 +20,7 @@ namespace MovieDemo.Controllers
         }
 
        
-        [EnableQuery(PageSize = 5)]
+        [EnableQuery()]// this is for suport url query working with oData//PageSize = 5
         public IHttpActionResult Get()
         {
             try
