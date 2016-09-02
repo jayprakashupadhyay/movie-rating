@@ -1,0 +1,21 @@
+﻿<h2>{{title}}</h2>
+<form class="col-sm-5">
+    <div class="form-group">
+        <label for="title"></label>
+        <input [(ngModel)]="newMovie.title" type="text" class="form-control" id="title" placeholder="title">
+    </div>
+    <div class="form-group">
+        <label for="Genre">Genre</label>
+        <input [(ngModel)]="newMovie.genre" type="text" class="form-control" id="last-name" placeholder="genre">
+    </div>
+    <div class="form-group">
+        <label for="classification">Classification</label>
+        <input [(ngModel)]="newMovie.classification" type="text" class="form-control" id="email" placeholder="classification">
+    </div>
+    <div class="form-group">
+        <label for="rating">Rating</label>
+        <input [(ngModel)]="newMovie.rating" type="text" class="form-control" id="rating" placeholder="rating">
+    </div>
+    <button (click)="createMovie()" type="button" class="btn btn-default">Save</button>
+    <button (click)="cancelCreate()" type="button" class="btn btn-danger">Cancel</button>
+</form>

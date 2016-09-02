@@ -1,0 +1,23 @@
+﻿li {
+    font-size: large;
+}
+
+div.panel-heading {
+   font-size: x-large; 
+}
+
+.panel-primary-wrap {
+    background-color:#EA4335;
+    color: white;
+}
+
+.create-text {
+     color: black;
+
+    text-decoration: none;
+}
+
+a:hover {
+       color: #4285F4;
+ 
+}

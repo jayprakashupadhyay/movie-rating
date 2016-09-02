@@ -1,0 +1,50 @@
+﻿<div class="panel">
+    <div class="panel-heading panel-primary-wrap">
+        <div style="float: left;">
+            {{pageTitle}} | <a class="create-text" [routerLink]="['Create']" >Create New Movie</a>
+        </div>
+        <div style="float: right;">
+           <div style="width:100%;">
+            <div class="input-group" style="width:300px;">
+                
+                <input type="text" [(ngModel)]='listFilter' class="form-control" placeholder="Search by title..." style="float: left;">
+                <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </span>
+            </div>
+        </div>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div *ngIf="movies && movies.length > 0">
+                <div class="card col-md-4"
+                     *ngFor="#movie of movies | movieFilter : listFilter ">
+
+                    <div class="card-block">
+                        <p class="movie">
+                            <img src="app/imgs/paris.jpg" class="img-responsive img-rounded"
+                                 [title]="movie.title" />
+                        </p>
+
+                        <p><b>Title:</b> {{movie.title | uppercase }}</p>
+                        <p><b>Release Date:</b> {{movie.releaseDate}}</p>
+                        <p><b>Genre:</b> {{movie.genre}}</p>
+                        <p><b>Classification:</b> {{movie.classification}}</p>
+                        <p><b>Cast:</b> {{movie.cast}}</p>
+                        <p style="position: relative;">
+                           <sz-star [rating]='movie.rating'></sz-star>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,9 @@
+﻿.crop {
+    overflow: hidden;
+}
+div {
+    cursor: pointer;
+}
+.glyphicon-star{
+    color:#EA4335;
+}
