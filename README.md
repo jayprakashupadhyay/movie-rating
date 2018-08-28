@@ -1,8 +1,8 @@
-### Detail of instruction on my blog https://sandywebdesigner.wordpress.com
+### Detail of instruction on my blog https://github.com/jayprakashupadhyay
 
- [link to the backend service instruction](https://sandywebdesigner.wordpress.com/2016/08/24/step-by-step-instruction-for-building-restful-api-with-asp-net-web-api-part-i/) 
+ [link to the backend service instruction](https://github.com/jayprakashupadhyay/) 
  
- [link to create angular2 app instruction](https://sandywebdesigner.wordpress.com/2016/09/06/angular-2-tutorial-movies-app/)
+ [link to create angular2 app instruction](https://github.com/jayprakashupadhyay/movie-rating/)
  
  step 1: MovieAPI backend service open it in VistoStudio, build it, will install all of the packages auotmatically, then run it.
  
